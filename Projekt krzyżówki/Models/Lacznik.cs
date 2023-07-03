@@ -2,7 +2,9 @@
 {
     public class Lacznik
     {
-        public int Pytanie { get; set; }
-        public int Odpowiedz { get; set; }
+        public int IdPytanie { get; set; }
+        public Pytania Pytanie { get; set; }
+        public int IdOdpowiedz { get; set; }
+        public Slowa Odpowiedz { get; set; }
     }
 }

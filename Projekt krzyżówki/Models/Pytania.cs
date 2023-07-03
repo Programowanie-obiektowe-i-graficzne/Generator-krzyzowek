@@ -6,5 +6,6 @@
         public string Tresc { get; set; }
         public int TrudnoscPytania { get; set; }
         public string KategoriaPytania { get; set; }
+        public List<Slowa> ListaSlow { get; set; }
     }
 }
