@@ -18,6 +18,18 @@ namespace Projekt_krzyżówki.Controllers
             return View();
         }
 
+        public IActionResult Autorzy()
+        {
+            return View();
+        }
+        public IActionResult Generator()
+        {
+            return View();
+        }
+        public IActionResult Opis()
+        {
+            return View();
+        }
         public IActionResult Privacy()
         {
             return View();
