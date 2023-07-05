@@ -30,6 +30,14 @@ namespace Projekt_krzyżówki.Controllers
         {
             return View();
         }
+        public IActionResult Dodaj()
+        {
+            return View();
+        }
+        public IActionResult Lista()
+        {
+            return View();
+        }
         public IActionResult Privacy()
         {
             return View();
