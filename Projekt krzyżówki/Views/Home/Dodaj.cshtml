@@ -1,8 +1,45 @@
-﻿@{
+﻿@using Projekt_krzyżówki.Models
+@model PytaniaVM
+@{
     ViewData["Title"] = "Dodaj pytanie lub odpowiedź";
 }
 
-<div class="text-center">
-    <h1 class="display-4 fw-bold">Witaj Przybyszu!</h1>
-    <p>Tu będzie możliwość dodania nowych rzeczy do bazy... Kiedyś</p>
+<div class="row">
+    <div class="col-md-8 offset-2">
+        <p>
+            <h4>Dodaj Pytanie</h4>
+        </p>
+    <div class="form-group">
+        <div class="col-md-8 offset-2">
+            <form asp-action="Dodaj pytanie">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group">
+                    <label asp-for="TrescPytania" class="control-label"></label>
+                    <input asp-for="TrescPytania" class="form-control" />
+                    <span asp-validation-for="TrescPytania" class="text-danger"></span>
+                </div>
+                
+                <div class="form-group">
+                    <label asp-for="KategoriaPytania" class="control-label"></label>
+                    <input asp-for="KategoriaPytania" class="form-control"/>
+                    <span asp-validation-for="KategoriaPytania" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="TrudnoscPytania" class="control-label"></label>
+                    <input asp-for="TrudnoscPytania" class="form-control"/>
+                    <span asp-validation-for="TrudnoscPytania" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Slowa" class="control-label"></label>
+                    <textarea asp-for="Slowa" class="form-control"> </textarea>
+                    <span asp-validation-for="Slowa" class="text-danger"></span>
+                </div>
+                <div class="form-group mt-3 mb-5">
+                    <input class="btn btn-outline-success float-right" type="submit" value="Dodaj Pytanie" />
+                    <a class="btn btn-outline-secondary" asp-controller="Movies" asp-action="Index">Anuluj</a>
+                </div>
+            </form>
+        </div>
+    </div>
 </div>
