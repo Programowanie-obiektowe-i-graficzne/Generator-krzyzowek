@@ -43,3 +43,41 @@
         </div>
     </div>
 </div>
+<div class="col-md-8 offset-2">
+    <p>
+         <h4>Dodaj Odpowiedź</h4>
+    </p>
+    <div class="form-group">
+        <div class="col-md-8 offset-2">
+            <form asp-action="Dodaj Słowo-Odpowiedź">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group">
+                    <label asp-for="NazwaSlowa" class="control-label"></label>
+                    <input asp-for="NazwaSlowa" class="form-control" />
+                    <span asp-validation-for="NazwaSlowa" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="KategoriaSlowa" class="control-label"></label>
+                    <input asp-for="KategoriaSlowa" class="form-control" />
+                    <span asp-validation-for="KategoriaSlowa" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="PodkategoriaSlowa" class="control-label"></label>
+                    <input asp-for="PodkategoriaSlowa" class="form-control" />
+                    <span asp-validation-for="PodkategoriaSlowa" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="CzyAnagram" class="control-label"></label>
+                    <input type="checkbox" asp-for="CzyAnagram" class="form-control" />
+                    <span asp-validation-for="CzyAnagram" class="text-danger"></span>
+                </div>
+                <div class="form-group mt-3 mb-5">
+                    <input class="btn btn-outline-success float-right" type="submit" value="Dodaj Słowo" />
+                    <a class="btn btn-outline-secondary" asp-controller="Movies" asp-action="Index">Anuluj</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
