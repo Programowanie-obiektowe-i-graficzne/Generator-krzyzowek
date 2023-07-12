@@ -1,7 +1,47 @@
 ﻿@{
     ViewData["Title"] = "Lista pytań i odpowiedzi";
 }
+@using Projekt_krzyżówki.Models;
+@model 
 <div class="text-center">
     <h1 class="display-4 fw-bold">Witaj Przybyszu!</h1>
     <p>Tu będzie lista pytań i odpowiedzi... Kiedyś</p>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    Pytanie
+                </th>
+                <th>
+                    Kategoria
+                </th>
+                <th>
+                    Odpowiedz
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @if (Model.Count() == null)
+            {
+                <tr>Jakis tekst </tr>
+            }
+            else
+            {
+                @foreach (var item in Model)
+                {
+                    <tr onclick="window.location='#/Home';">
+                        <td class="align-middle">
+                            @Html.DisplayFor(modelItem => item.Tresc)
+                        </td>
+                        <td class="align-middle">
+                            @Html.DisplayFor(modelItem => item.Kategoria)
+                        </td>
+                        <td class="align-middle">
+                            @Html.DisplayFor(modelItem => item.Id_Odpowiedzi)
+                        </td>
+                    </tr>
+                }
+            }
+        </tbody>
+    </table>
 </div>
