@@ -1,9 +1,10 @@
 ﻿using Projekt_krzyżówki.Data;
+using Projekt_krzyżówki.Interfaces;
 using Projekt_krzyżówki.Models.MODELS;
 
 namespace Projekt_krzyżówki.Repository
 {
-    public class KrzyzowkiRepository
+    public class KrzyzowkiRepository : IKrzyzowkiRepository
     {
         private readonly DataContext _context; 
         public KrzyzowkiRepository(DataContext context)

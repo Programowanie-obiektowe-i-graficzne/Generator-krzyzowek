@@ -1,7 +1,12 @@
 using Microsoft.EntityFrameworkCore;
 using Projekt_krzy¿ówki.Data;
+using Projekt_krzy¿ówki.Interfaces;
+using Projekt_krzy¿ówki.Repository;
+
 var builder = WebApplication.CreateBuilder(args);
 
+builder.Services.AddScoped<IKrzyzowkiRepository, KrzyzowkiRepository>();
+builder.Services.AddScoped<IPytaniaRepository, PytaniaRepository>();
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 builder.Services.AddEndpointsApiExplorer();
