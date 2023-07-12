@@ -8,6 +8,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddScoped<IKrzyzowkiRepository, KrzyzowkiRepository>();
 builder.Services.AddScoped<IPytaniaRepository, PytaniaRepository>();
 // Add services to the container.
+builder.Services.AddScoped<IUzytkownicyRepository, UzytkownikRepository>();
 builder.Services.AddControllersWithViews();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddDbContext<DataContext>(options =>
