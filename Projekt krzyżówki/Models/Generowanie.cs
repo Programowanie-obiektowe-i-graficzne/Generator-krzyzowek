@@ -2,5 +2,7 @@
 {
     public class Generowanie
     {
+        string[, ] pola = new string[8,8];
+
     }
 }
